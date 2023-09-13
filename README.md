@@ -1,2 +1,2 @@
-# UGradGigs
-A platform for students to improve their skills through real world projects
+# Synergy crew
+A platform for students to post their college projects and find already existing ideas.
