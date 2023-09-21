@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal Registration</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+    .logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.text-container {
+    margin-left: 20px; /* Adjust the margin as needed to separate the logo and text */
+}
+  .navbar-nav .nav-link {
+        font-size: 18px; /* Adjust the font size as needed */
+    }
+     .navbar-nav .nav-item {
+        margin-right: 20px; /* Adjust the margin as needed to create space between list items */
+    }
+    .signup{
+    margin-top:20px;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    
+    </style>
+</head>
+<body>
+        <header>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="#">
+    <div class="logo-container">
+        <img src="Jharkhand_logo.png" alt="logo" width="90" height="90" class="d-none d-sm-block mx-auto">
+        <img src="Jharkhand_logo.png" alt="logo" width="60" height="60" class="d-sm-none mx-auto">
+        <div class="text-container">
+            <span>Government Of Jharkhand</span><br>
+            <span>Student Portal</span>
+        </div>
+    </div>
+</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+          <li class="nav-item">
+                <a class="nav-link" href="login.html">Sign In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup.html">Sign Up</a>
+            </li>
+          
+              <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="help.html">Help</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+              
+    </header>
+    <div class="container mt-5">
+        <h1 class="text-center">Student Portal Registration</h1>
+        <form action="signup" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="username">User Name:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="collegeregno">College Reg No:</label>
+                <input type="text" class="form-control" id="collegeregno" name="collegeregno" required>
+            </div>
+
+            <div class="form-group">
+                <label for="organization">Organization:</label>
+                <input type="text" class="form-control" id="organization" name="organization" required>
+            </div>
+
+            <div class="form-group">
+                <label for="collegeemail">College Email:</label>
+                <input type="email" class="form-control" id="collegeemail" name="collegeemail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="personalemail">Personal Email:</label>
+                <input type="email" class="form-control" id="personalemail" name="personalemail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sex">Gender:</label>
+                <select class="form-control" id="sex" name="sex" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">DOB:</label>
+                <input type="date" class="form-control" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="highestqualification">Highest Qualification:</label>
+                <input type="text" class="form-control" id="highestqualification" name="highestqualification" required>
+            </div>
+
+            <div class="form-group">
+                <label for="yearofgraduation">Year of Graduation:</label>
+                <input type="text" class="form-control" id="yearofgraduation" name="yearofgraduation" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pincode">Pin Code:</label>
+                <input type="text" class="form-control" id="pincode" name="pincode" required>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State:</label>
+                <select class="form-control" id="state" name="state" required>
+                    <option value="">Select a State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Chhattisgarh">Chhattisgarh</option>
+    <option value="Goa">Goa</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Manipur">Manipur</option>
+    <option value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Sikkim">Sikkim</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Telangana">Telangana</option>
+    <option value="Tripura">Tripura</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="West Bengal">West Bengal</option>
+                    <!-- Add other state options here -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="district">District:</label>
+                <input type="text" class="form-control" id="district" name="district" required>
+            </div>
+
+            <div class="form-group">
+                <label for="currentyear">Current Year:</label>
+                <input type="date" class="form-control" id="currentyear" name="currentyear" required>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <input type="text" class="form-control" id="department" name="department" required>
+            </div>
+
+            <div class="form-group">
+                <label for="degree">Degree:</label>
+                <input type="text" class="form-control" id="degree" name="degree" required>
+            </div>
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+                <div class="signup">
+            <button type="submit" class="btn btn-primary">Sign up</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

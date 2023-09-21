@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Portal</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+	background-color: #f6f8fa;
+	
+	
+}
+
+h1 {
+	color: #24292e;
+	font-size: 36px;
+	text-align: center;
+}
+
+form {
+	margin-top: 40px;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fff;
+	padding: 50px;
+	border: 1px solid #e1e4e8;
+	border-radius: 6px;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+	display: block;
+	text-align: left;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #24292e;
+}
+
+input[type="text"], input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #e1e4e8;
+	border-radius: 6px;
+	margin-bottom: 20px;
+}
+
+input[type="submit"] {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #24292e;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #0366d6;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.text-container {
+    margin-left: 20px; /* Adjust the margin as needed to separate the logo and text */
+}
+  .navbar-nav .nav-link {
+        font-size: 18px; /* Adjust the font size as needed */
+    }
+     .navbar-nav .nav-item {
+        margin-right: 20px; /* Adjust the margin as needed to create space between list items */
+    }
+</style>
+</head>
+<body>
+       <header>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="#">
+    <div class="logo-container">
+        <img src="Jharkhand_logo.png" alt="logo" width="90" height="90" class="d-none d-sm-block mx-auto">
+        <img src="Jharkhand_logo.png" alt="logo" width="60" height="60" class="d-sm-none mx-auto">
+        <div class="text-container">
+            <span>Government Of Jharkhand</span><br>
+            <span>Student Portal</span>
+        </div>
+    </div>
+</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+          <li class="nav-item">
+                <a class="nav-link" href="login.html">Sign In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup.html">Sign Up</a>
+            </li>
+          
+              <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="help.html">Help</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+              
+    </header>
+    <br>
+	<h1>Login to Student portal</h1>
+	<form action="login" method="post">
+		<div>
+			<label for="username">Username or email address:</label> <input
+				type="text" id="username" name="username" required>
+		</div>
+		<div>
+			<label for="password">Password:</label> <input type="password"
+				id="password" name="password" required>
+		</div>
+		<br>
+		<div>
+			<input type="submit" value="Log in">
+
+		</div>
+		<br>
+		<div class="options">
+			<a href="signup.html" class="signup">New user</a>
+		</div>
+	</form>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+     
+</body>
+</html>

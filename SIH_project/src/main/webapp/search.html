@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <title>Search Page</title>
+    <style>
+
+      
+        .profile-icon {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 28px; 
+        }
+
+       
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+
+        .search-input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        
+        .file-input {
+            display: none;
+        }
+
+        .upload-button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+      
+        .search-results {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.text-container {
+    margin-left: 20px; 
+}
+  .navbar-nav .nav-link {
+        font-size: 18px; 
+    }
+     .navbar-nav .nav-item {
+        margin-right: 20px;
+    }
+    .lead{
+    margin:20px;
+    }
+
+    </style>
+</head>
+<body>
+     <header>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="#">
+    <div class="logo-container">
+        <img src="Jharkhand_logo.png" alt="logo" width="90" height="90" class="d-none d-sm-block mx-auto">
+        <img src="Jharkhand_logo.png" alt="logo" width="60" height="60" class="d-sm-none mx-auto">
+        <div class="text-container">
+            <span>Government Of Jharkhand</span><br>
+            <span>Student Portal</span>
+        </div>
+    </div>
+</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+          <li class="nav-item">
+                <a class="nav-link" href="login.html">Sign In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup.html">Sign Up</a>
+            </li>
+          
+              <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="help.html">Help</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+   <div class="profile-icon" id="profileIcon">
+    <form id="profileForm" action="UserProfileServlet" method="POST">
+        <button type="submit" style="text-decoration: none; background: none; border: none; cursor: pointer;">
+          
+             <i class="fas fa-user-circle"></i>
+        </button>
+    </form>
+</div>
+              
+    </header>
+    <p class="lead">
+        Innovation is the key to betterment of education, and students in the Indian universities/colleges put a lot of effort into projects as a part of academic requirements.
+        If a common knowledge platform (with a facility for plagiarism) is created to bring all project works taken up at various levels by the students in Technical / Higher Educational Institutes and Universities throughout the country, then it will be a great source of knowledge and also will help the student community to take up unique/innovative project works.
+    </p>
+   
+    <div class="search-container">
+     
+        <form id="searchForm" action="SearchServlet" method="POST">
+            <input type="text" class="search-input" name="searchKeyword" placeholder="Search by file name...">
+            <button class="search-button" type="button" onclick="search()">Search</button>
+        </form>
+        <form action="UploadFileServlet" method="POST" enctype="multipart/form-data">
+            <label for="file" class="upload-button">Select File</label>
+            <input type="file" id="file" name="file" class="file-input">
+            <input type="submit" value="Upload">
+        </form>
+         <a href="work-in-progress.html" class="check-plagiarism-button">Check Plagiarism</a>
+        
+        <div class="search-results" id="searchResults">
+           
+        </div>
+    </div>
+
+
+    <script>
+        // Function to perform an AJAX search
+        function search() {
+            var searchKeyword = document.getElementsByName("searchKeyword")[0].value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "SearchServlet", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = xhr.responseText;
+                    document.getElementById("searchResults").innerHTML = response;
+                }
+            };
+            xhr.send("searchKeyword=" + searchKeyword);
+        }
+    </script>
+</body>
+</html>
